@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bink Racing Championship</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <header class="panel">
+      <h1>Bink Racing Championship</h1>
+      <p class="tagline">Guide your bink to victory across three laps. Watch out for slow turf and nail the turns!</p>
+      <button id="startButton" class="primary">Start Race</button>
+      <div class="hud">
+        <div class="hud-item">
+          <span class="label">Lap</span>
+          <span id="lapCounter" class="value">0 / 3</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Time</span>
+          <span id="timer" class="value">00:00.0</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Speed</span>
+          <span id="speed" class="value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Position</span>
+          <span id="position" class="value">--</span>
+        </div>
+      </div>
+    </header>
+    <section class="stage">
+      <canvas id="track" width="960" height="600" aria-label="Bink racing track"></canvas>
+      <div class="controls-panel">
+        <h2>Controls</h2>
+        <ul>
+          <li><strong>Up / W</strong> – Accelerate</li>
+          <li><strong>Down / S</strong> – Brake &amp; reverse</li>
+          <li><strong>Left / A</strong> – Steer left</li>
+          <li><strong>Right / D</strong> – Steer right</li>
+          <li><strong>Space</strong> – Quick drift pulse</li>
+        </ul>
+      </div>
+    </section>
+    <aside class="panel leaderboard">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboard">
+        <li>Finish a race to post your time!</li>
+      </ol>
+      <div class="tips">
+        <h3>Track Tips</h3>
+        <ul>
+          <li>Stay on the bright racing lane for full grip and speed.</li>
+          <li>Grass slows down your bink – drift carefully on corners.</li>
+          <li>Boost pads give a burst of speed when you line up perfectly.</li>
+          <li>Bots react to your moves, so outsmart them on the apex.</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
